@@ -66,7 +66,47 @@
 
 # II. Playable Character
 # III. Offspring 
-# IV. Game Mechanics/ Goals
+
+-------
+# IV. Major Technical Challenges 
+
+This game is not just a game: It is an ecosystem simulator with advanced graphics and gameplay mechanics. To achieve something so ambitious we must first prototype some elements of the game, each a small project on its own. 
+
+## Procedural Drawing of Life Forms
+We must develop a map that can compute a good-looking creature from some definite set of parameters.  For games like no man's sky, this alone can be the selling point of the while game. For us things can be a little simpler because:
+ - We only must render 2d sprites rather than full 3d models
+ - Sprites are quite small (maybe 64x64 tops), so details will be less visible 
+ - Bad-looking creatures are somewhat ok provided they are not too common
+ (<30%). If the user decides to cross a frog with a giraffe do they expect something pretty? 
+
+### Approach 
+ - Generate crude 3d model using a fractal technique and lots of random numbers
+ - Highlight areas like head, arms etc using colors
+ - Project the 3d model onto a 2d image, emphasizing borders using outlines 
+ - Post process colored regions with features like face, claws etc
+
+## Ecosystem simulation
+
+In single player, the players main enemy is the ecosystem itself. The player must do better than random natural selection and constantly adapt to a changing environment. To make this challenging the ecosystem must also be good at adapting and produce specialized creatures that are hard to defeat. 
+
+### Suggestions for a prototype
+ - Use cellular automata. Each cell can hold one species, or be empty. Each cell has environment parameters like temperature. 
+ - Each species has a list of properties governing combat strength,  rate of movement, food requirements. 
+ - Time evolve the cellular automaton and see if interesting behavior is common. 
+ - Find a means for species to mix and mingle their properties, and improve through natural selection. 
+ - Do not make the visualization too fancy. 
+
+## AI Combat system
+
+Combat works as follows:
+ - Player controls a main creature with wasd. If this creature dies, it is game over. 
+ - Player can select a single other creature to control with the mouse, and action buttons 1234.
+ - More than two creatures can be in play, but this is only useful if the player can coordinate them all. 
+ - Coordination of other creatures is assisted by AI. 
+
+To make this work we need a good creature AI. We need this for enemy creatures anyway. Can we develop a combat system with bare bones graphics that is already fun to play without all the ecosystem jazz? 
+
+-------
 # V. Polish
 # Fuck yea we made a game
 # VI. Multiplayer!
