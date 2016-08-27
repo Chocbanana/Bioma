@@ -45,21 +45,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DrawLine.cs" />
+     <Compile Include="Assets\Scripts\DrawLine.cs" />
+     <Compile Include="Assets\Scripts\TestDisplay.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
+ <Reference Include="Mono.Cairo">
+ <HintPath>/Users/Bhavana/Programming/Github/Bioma/Assets/Plugins/Mono.Cairo.dll</HintPath>
+ </Reference>
  <Reference Include="System.Drawing.Design">
  <HintPath>/Users/Bhavana/Programming/Github/Bioma/Assets/Plugins/System.Drawing.Design.dll</HintPath>
  </Reference>
  <Reference Include="System.Drawing">
  <HintPath>/Users/Bhavana/Programming/Github/Bioma/Assets/Plugins/System.Drawing.dll</HintPath>
- </Reference>
- <Reference Include="Mono.Cairo">
- <HintPath>/Users/Bhavana/Programming/Github/Bioma/Assets/Plugins/Mono.Cairo.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

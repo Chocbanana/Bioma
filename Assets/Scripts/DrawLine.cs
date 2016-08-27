@@ -2,58 +2,58 @@
 using System.Collections;
 
 //using System.Drawing;
-using Cairo;
+//using Cairo;
 
 public class DrawLine : MonoBehaviour
 {
-	private string filename;
-	void drawtest ()
-	{
-		// The using statement ensures that potentially heavy objects
-		// are disposed immediately.
-		using (ImageSurface draw = new ImageSurface (Format.Argb32, 70, 150)){
-			using (Context gr = new Context(draw)){
-				gr.Antialias = Antialias.Subpixel;    // sets the anti-aliasing method
-				gr.LineWidth = 9;          // sets the line width
-				gr.Color = new Cairo.Color (0, 0, 0, 1);   // red, green, blue, alpha
-				gr.MoveTo (10, 10);          // sets the Context's start point.
-				gr.LineTo (40, 60);          // draws a "virtual" line from 5,5 to 20,30
-				gr.Stroke ();          //stroke the line to the image surface
-
-				gr.Antialias = Antialias.Gray;
-				gr.LineWidth = 8;
-				gr.Color = new Cairo.Color (1, 0, 0, 1);
-				gr.LineCap = LineCap.Round;
-				gr.MoveTo (10, 50);
-				gr.LineTo (40, 100);
-				gr.Stroke ();
-
-				gr.Antialias = Antialias.None;    //fastest method but low quality
-				gr.LineWidth = 7;
-				gr.MoveTo (10, 90);
-				gr.LineTo (40, 140);
-				gr.Stroke ();
-
-				draw.WriteToPng (filename);  //save the image as a png image.
-			}
-		}
-	}
-
-//	private void createPlant() {
-//		Bitmap img = new Bitmap(300, 300);
-//		System.Drawing.Graphics g = System.Drawing.Graphics.FromImage(img);
-//		Pen line = new Pen (System.Drawing.Color.Black, 4f);
-//		g.DrawLine (line, new PointF (5, 100), new PointF (275, 150));
+//	private string filename;
+//	void drawtest ()
+//	{
+//		// The using statement ensures that potentially heavy objects
+//		// are disposed immediately.
+//		using (ImageSurface draw = new ImageSurface (Format.Argb32, 70, 150)){
+//			using (Context gr = new Context(draw)){
+//				gr.Antialias = Antialias.Subpixel;    // sets the anti-aliasing method
+//				gr.LineWidth = 9;          // sets the line width
+//				gr.Color = new Cairo.Color (0, 0, 0, 1);   // red, green, blue, alpha
+//				gr.MoveTo (10, 10);          // sets the Context's start point.
+//				gr.LineTo (40, 60);          // draws a "virtual" line from 5,5 to 20,30
+//				gr.Stroke ();          //stroke the line to the image surface
 //
-//		img.Save(filename);
+//				gr.Antialias = Antialias.Gray;
+//				gr.LineWidth = 8;
+//				gr.Color = new Cairo.Color (1, 0, 0, 1);
+//				gr.LineCap = LineCap.Round;
+//				gr.MoveTo (10, 50);
+//				gr.LineTo (40, 100);
+//				gr.Stroke ();
 //
+//				gr.Antialias = Antialias.None;    //fastest method but low quality
+//				gr.LineWidth = 7;
+//				gr.MoveTo (10, 90);
+//				gr.LineTo (40, 140);
+//				gr.Stroke ();
 //
+//				draw.WriteToPng (filename);  //save the image as a png image.
+//			}
+//		}
 //	}
-
-	void Awake() {
-		filename = Application.dataPath + "/testdraw.png";
-	}
-
+//
+////	private void createPlant() {
+////		Bitmap img = new Bitmap(300, 300);
+////		System.Drawing.Graphics g = System.Drawing.Graphics.FromImage(img);
+////		Pen line = new Pen (System.Drawing.Color.Black, 4f);
+////		g.DrawLine (line, new PointF (5, 100), new PointF (275, 150));
+////
+////		img.Save(filename);
+////
+////
+////	}
+//
+//	void Awake() {
+//		filename = Application.dataPath + "/testdraw.png";
+//	}
+//
 
 
 	//reference to LineRenderer component
@@ -70,8 +70,8 @@ public class DrawLine : MonoBehaviour
 		//Create new Line on left mouse click(down)
 		if(Input.GetMouseButtonDown(0))
 		{
-			drawtest ();
-			Debug.Log ("Created file at " + filename);
+//			drawtest ();
+//			Debug.Log ("Created file at " + filename);
 			//check if there is no line renderer created
 			if(line == null){
 				//create the line
