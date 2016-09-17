@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/bhav_testscene.unity
+- path: Assets/Scenes/bhav_testscene.unity
   isLoaded: 1
   isActive: 1
